@@ -1,2 +1,5 @@
-print('Hello')
-print('Send nudes')
+# coctail sort
+
+def CoctailSort(array):
+    print("send nudes")
+
