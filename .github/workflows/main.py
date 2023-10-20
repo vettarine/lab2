@@ -1,21 +1,21 @@
 # cocktail sort
 
-def cocktail_sort(array):
-    for i in range(len(array) - 1, 0, -1):
+def cocktail_sort(sort_array):
+    for i in range(len(sort_array) - 1, 0, -1):
         is_swapped = False
 
         for j in range(i, 0, -1):
-            if array[j] < array[j - 1]:
-                array[j], array[j - 1] = array[j - 1], array[j]
+            if sort_array[j] < sort_array[j - 1]:
+                sort_array[j], sort_array[j - 1] = sort_array[j - 1], sort_array[j]
                 is_swapped = True
 
         for j in range(i):
-            if array[j] > array[j + 1]:
-                array[j], array[j + 1] = array[j + 1], array[j]
+            if sort_array[j] > sort_array[j + 1]:
+                sort_array[j], sort_array[j + 1] = sort_array[j + 1], sort_array[j]
                 is_swapped = True
 
         if not is_swapped:
-            return array
+            return sort_array
 
 
 array = [15, 37, 69, 26, 78]
