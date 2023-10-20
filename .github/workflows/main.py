@@ -20,4 +20,4 @@ def cocktail_sort(nums):
 
 nums = [15, 37, 69, 26, 78]
 print(cocktail_sort(nums))
-
+print(yazaebalas)
