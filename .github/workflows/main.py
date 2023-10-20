@@ -1,6 +1,6 @@
 # cocktail sort
 
-def CocktailSort(nums):
+def cocktail_sort(nums):
     for i in range(len(nums) - 1, 0, -1):
         is_swapped = False
 
@@ -19,5 +19,5 @@ def CocktailSort(nums):
 
 
 nums = [15, 37, 69, 26, 78]
-print(CocktailSort(nums))
+print(cocktail_sort(nums))
 
