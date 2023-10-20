@@ -1,6 +1,6 @@
-# coctail sort
+# cocktail sort
 
-def CoctailSort(nums):
+def CocktailSort(nums):
     for i in range(len(nums) - 1, 0, -1):
         is_swapped = False
 
