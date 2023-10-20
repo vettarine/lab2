@@ -1,0 +1,18 @@
+Index: .github/workflows/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># cocktail sort\r\n\r\ndef cocktail_sort(array):\r\n    for i in range(len(array) - 1, 0, -1):\r\n        is_swapped = False\r\n\r\n        for j in range(i, 0, -1):\r\n            if array[j] < array[j - 1]:\r\n                array[j], array[j - 1] = array[j - 1], array[j]\r\n                is_swapped = True\r\n\r\n        for j in range(i):\r\n            if array[j] > array[j + 1]:\r\n                array[j], array[j + 1] = array[j + 1], array[j]\r\n                is_swapped = True\r\n\r\n        if not is_swapped:\r\n            return array\r\n\r\n\r\narray = [15, 37, 69, 26, 78]\r\nprint(cocktail_sort(array))\r\nprint('yazaebalas')\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/main.py b/.github/workflows/main.py
+--- a/.github/workflows/main.py	(revision 022798c730c2ddc4cd163b8fe5d219fe75505fd0)
++++ b/.github/workflows/main.py	(date 1697813665621)
+@@ -1,6 +1,6 @@
+ # cocktail sort
+ 
+-def cocktail_sort(array):
++def cocktail_sort(sort_array):
+     for i in range(len(array) - 1, 0, -1):
+         is_swapped = False
+ 
