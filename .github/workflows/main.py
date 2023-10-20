@@ -19,5 +19,5 @@ def CocktailSort(nums):
 
 
 nums = [15, 37, 69, 26, 78]
-print(CoctailSort(nums))
+print(CocktailSort(nums))
 
