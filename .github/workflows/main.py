@@ -1,5 +1,7 @@
 # cocktail sort
 
+from random import randint
+
 def cocktail_sort(sort_array):
     for i in range(len(sort_array) - 1, 0, -1):
         is_swapped = False
@@ -18,6 +20,10 @@ def cocktail_sort(sort_array):
             return sort_array
 
 
-array = [15, 37, 69, 26, 78]
-print(cocktail_sort(array))
-print('yazaebalas')
+num = int(input("Введите количество чисел для сортировки: "))
+array = []
+for i in range(num):
+    array.append(randint(10, 100))
+print("Оригинальный массив: ", array)
+print("Отсортированный массив: ", cocktail_sort(array))
+
