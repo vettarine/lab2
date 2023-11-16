@@ -1,4 +1,5 @@
 def cocktail_sort(sort_array):
+    """Sort with cocktail sort method and return the array"""
     for i in range(len(sort_array) - 1, 0, -1):
         is_swapped = False  # цикл идет, пока элементы меняются местами (т.е. пока не стоят в нужном порядке)
 
