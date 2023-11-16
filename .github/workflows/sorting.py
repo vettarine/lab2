@@ -1,6 +1,7 @@
 def cocktail_sort(sort_array):
     """Sort with cocktail sort method and return the array"""
-    for i in range(len(sort_array) - 1, 0, -1):
+    length = len(sort_array) # длина массива
+    for i in range(length - 1, 0, -1):
         is_swapped = False  # цикл идет, пока элементы меняются местами (т.е. пока не стоят в нужном порядке)
 
         for j in range(i, 0, -1):  # сортировка с конца массива (меньший элемент к началу массива)
