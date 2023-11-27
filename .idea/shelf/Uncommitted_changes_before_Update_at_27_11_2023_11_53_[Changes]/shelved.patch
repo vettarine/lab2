@@ -1,0 +1,15 @@
+diff --git a/.github/workflows/array_generating.py b/.github/array_generating.py
+rename from .github/workflows/array_generating.py
+rename to .github/array_generating.py
+diff --git a/.github/workflows/sorting.py b/.github/sorting.py
+rename from .github/workflows/sorting.py
+rename to .github/sorting.py
+diff --git a/.github/workflows/python-app.yml b/.github/python-app.yml
+rename from .github/workflows/python-app.yml
+rename to .github/python-app.yml
+diff --git a/.github/workflows/main.py b/.github/main.py
+rename from .github/workflows/main.py
+rename to .github/main.py
+diff --git a/.github/workflows/printing.py b/.github/printing.py
+rename from .github/workflows/printing.py
+rename to .github/printing.py
