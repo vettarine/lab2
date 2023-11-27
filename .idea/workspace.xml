@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aa143f1-4645-4df5-b102-0e397627ee43" name="Changes" comment="" />
+    <list default="true" id="4aa143f1-4645-4df5-b102-0e397627ee43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/array_generating.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/array_generating.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/printing.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/printing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/python-app.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/python-app.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/sorting.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/sorting.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
