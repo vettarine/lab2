@@ -1,3 +1,5 @@
 def file_save(array):
-    with open('file.txt', 'w') as f:
+    """Saving the array in a file"""
+    path = input("Сохранить файл в:  ")
+    with open(path, 'w') as f:
         f.write(str(array))
