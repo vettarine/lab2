@@ -6,8 +6,14 @@ from sorting import cocktail_sort
 from file_work import file_save, file_load
 from cheker import check_int
 from tests import *
+from database_work import *
 
 
+db_create('arrays.db')
+
+
+
+"""
 test1()
 test2()
 test3()
@@ -17,7 +23,7 @@ test4('test3.txt', 10000, 3)
 test5('test1.txt', 1)
 test5('test2.txt', 2)
 test5('test3.txt', 3)
-
+"""
 
 """
 print_salute()

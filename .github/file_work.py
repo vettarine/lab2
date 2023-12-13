@@ -23,3 +23,10 @@ def file_load(file): # я горжусь этой функцией
             i += 1
     return array
 
+def array_character_development(array):
+    list = ''
+    for a in array:
+        list += str(a) + ' '
+    list = list[:-1]
+    return list
+
