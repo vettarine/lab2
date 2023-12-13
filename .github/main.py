@@ -11,6 +11,7 @@ from database_work import *
 
 db_create('arrays.db')
 
+test1()
 
 
 """

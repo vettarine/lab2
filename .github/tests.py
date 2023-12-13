@@ -1,19 +1,17 @@
 from time import time
 from array_generating import array_generating
 from random import randint
-from file_work import file_save_default, file_load
+from file_work import file_save_default, file_load, file_save_db
 from  sorting import cocktail_sort
 
 
 def test1():
     start_time = time()
     array = []
-    for i in range(100):
-        try:
-            array = (array_generating(randint(10, 50)))
-            file_save_default(array, 1)
-        except:
-            print("error test 1")
+    for i in range(100): # генерируем 100 массивчиков
+            array = (array_generating(randint(10, 50))) # это один массивчик
+            file_save_default(array, 1) # закидываем в файлик
+    file_save_db(1) # закидываем в бдшку
     end_time = time()
     print("test 1 completed, time: ", end_time - start_time)
 
@@ -37,7 +35,7 @@ def test3():
     for i in range(10000):
         try:
             array = (array_generating(randint(10, 50)))
-            file_save_default(array, 3)
+            file_save_db(array, 3)
         except:
             print("error test 3")
     end_time = time()

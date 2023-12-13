@@ -1,5 +1,5 @@
 import sqlite3
-from file_work import array_character_development
+from array_generating import array_character_development
 
 
 def db_create(database):
@@ -21,4 +21,13 @@ def db_create(database):
 
 def db_input(index, array):
     cursor.execute("INSERT INTO array (id, items) VALUES (?, ?)", (index, array_character_development(array)))
+    con.commit()
+
+def db_input_sorted(array):
+    for i in range(len(array)):
+        cursor.execute("INSERT INTO array_sorted (id, items) VALUES (?, ?)", (i, array_character_development(array[i])))
+        con.commit()
+
+def db_delete():
+    cursor.execute("INSERT INTO array (id, items) VALUES (?, ?)", (i, array_character_development(array[i])))
     con.commit()
