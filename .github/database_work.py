@@ -30,10 +30,9 @@ def db_output(index): # считывание массивчика из бдшк�
     return cursor.fetchall()[0][0] # возвращает массив в массиве в общем чтобы строка была надо [0][0]
 
 
-def db_input_sorted(array): # добавление отсортированного массивчика в бдшку
-    for i in range(len(array)):
-        cursor.execute("INSERT INTO array_sorted (id, items) VALUES (?, ?)", (i, array_character_development(array[i])))
-        con.commit()
+def db_input_sorted(index, array): # добавление отсортированного массивчика в бдшку
+    cursor.execute("INSERT INTO array_sorted (id, items) VALUES (?, ?)", (index, array_character_development(array[i])))
+    con.commit()
 
 
 def db_delete(): # тут будет удаление всей таблицы чтобы не втыкала
