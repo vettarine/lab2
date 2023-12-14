@@ -1,54 +1,50 @@
 from time import time
 from array_generating import array_generating
 from random import randint
-from file_work import file_save_default, file_load, file_save_db
-from  sorting import cocktail_sort
+from file_work import *
+from sorting import cocktail_sort
+from database_work import db_delete
 
 
-def test1():
+def test1(): # генерим 100 массивчиков и закидываем в бд
     start_time = time()
-    array = []
-    for i in range(100): # генерируем 100 массивчиков
-            array = (array_generating(randint(10, 50))) # это один массивчик
-            file_save_default(array, 1) # закидываем в файлик
-    file_save_db(1) # закидываем в бдшку
+    num = 100
+    try:
+        file_save_db(num)
+    except:
+        print("error test 1")
     end_time = time()
     print("test 1 completed, time: ", end_time - start_time)
 
 
-def test2():
+def test2(): # 1000
     start_time = time()
-    array = []
-    for i in range(1000):
-        try:
-            array = (array_generating(randint(10, 50)))
-            file_save_default(array, 2)
-        except:
-            print("error test 2")
+    num = 1000
+    try:
+        file_save_db(num)
+    except:
+        print("error test 2")
     end_time = time()
     print("test 2 completed, time: ", end_time - start_time)
 
 
-def test3():
+def test3(): # 10000
     start_time = time()
-    array = []
-    for i in range(10000):
-        try:
-            array = (array_generating(randint(10, 50)))
-            file_save_db(array, 3)
-        except:
-            print("error test 3")
+    num = 10000
+    try:
+        file_save_db(num)
+    except:
+        print("error test 3")
     end_time = time()
     print("test 3 completed, time: ", end_time - start_time)
 
 
-def test4(file, amount, index): # тест с сортировкой
+def test4(amount): # тут надо будет считать с бд 100 рандомных массивов и отсортировать
     start_time = time()
+    index = len(str(amount // 100))
     try:
-        array = file_load(file)
         for i in range(100):
-            num = randint(0, amount - 1)
-            array[num] = cocktail_sort(array[num])
+            file_load_db(amount) # amount - количество массивов в бд (100, 1000, 10000)
     except:
         print("error test 4." + str(index))
     end_time = time()
@@ -57,11 +53,11 @@ def test4(file, amount, index): # тест с сортировкой
     print("test 4." + str(index) + " completed, time: ", full_time, "\naverage time for each array: ", avg_time)
 
 
-def test5(file, index):
+def test5(amount):
     start_time = time()
+    index = len(str(amount // 100))
     try:
-        with open(file, 'r+') as f:
-            f.truncate(0)
+        db_delete()
     except:
         print("error test 5." + str(index))
     end_time = time()

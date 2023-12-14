@@ -3,15 +3,31 @@
 from array_generating import array_generating
 from printing import print_array, print_salute
 from sorting import cocktail_sort
-from file_work import file_save, file_load
+from file_work import *
 from cheker import check_int
 from tests import *
 from database_work import *
 
 
 db_create('arrays.db')
+db_delete()
 
 test1()
+test4(100)
+test5(100)
+
+print()
+
+test2()
+test4(1000)    
+test5(1000)
+
+print()
+
+test3()
+test4(10000)
+test5(10000)
+
 
 
 """

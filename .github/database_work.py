@@ -17,17 +17,25 @@ def db_create(database):
                         items TEXT)"
                    )
 
-# массивы будут в каждой строке типа [1&2&3&4&5]
+# массивы будут в каждой строке типа '1 2 3 4 5' строкой
 
-def db_input(index, array):
-    cursor.execute("INSERT INTO array (id, items) VALUES (?, ?)", (index, array_character_development(array)))
+
+def db_input(index, array): # добавление массивчика в бдшку
+    cursor.execute("INSERT INTO array (id, items) VALUES (?, ?)", (index, array_character_development(array))) # сиквел запрос
     con.commit()
 
-def db_input_sorted(array):
+
+def db_output(index): # считывание массивчика из бдшки
+    cursor.execute("SELECT items FROM array WHERE id = " + str(index))  # сиквел запрос
+    return cursor.fetchall()[0][0] # возвращает массив в массиве в общем чтобы строка была надо [0][0]
+
+
+def db_input_sorted(array): # добавление отсортированного массивчика в бдшку
     for i in range(len(array)):
         cursor.execute("INSERT INTO array_sorted (id, items) VALUES (?, ?)", (i, array_character_development(array[i])))
         con.commit()
 
-def db_delete():
-    cursor.execute("INSERT INTO array (id, items) VALUES (?, ?)", (i, array_character_development(array[i])))
+
+def db_delete(): # тут будет удаление всей таблицы чтобы не втыкала
+    cursor.execute("DELETE FROM array")
     con.commit()
