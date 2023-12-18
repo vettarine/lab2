@@ -31,7 +31,7 @@ def db_output(index): # считывание массивчика из бдшк�
 
 
 def db_input_sorted(index, array): # добавление отсортированного массивчика в бдшку
-    cursor.execute("INSERT INTO array_sorted (id, items) VALUES (?, ?)", (index, array_character_development(array[i])))
+    cursor.execute("INSERT INTO array_sorted (id, items) VALUES (?, ?)", (index, array_character_development(array[index])))
     con.commit()
 
 

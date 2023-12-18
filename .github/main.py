@@ -12,21 +12,9 @@ from database_work import *
 db_create('arrays.db')
 db_delete()
 
-test1()
-test4(100)
-test5(100)
-
-print()
-
-test2()
-test4(1000)    
-test5(1000)
-
-print()
-
-test3()
-test4(10000)
-test5(10000)
+test_generate(10000)
+test_sort(10000)
+test_delete(10000)
 
 
 

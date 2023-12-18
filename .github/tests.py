@@ -6,40 +6,21 @@ from sorting import cocktail_sort
 from database_work import db_delete
 
 
-def test1(): # генерим 100 массивчиков и закидываем в бд
+def test_generate(amount): # генерим 100 массивчиков и закидываем в бд
     start_time = time()
-    num = 100
+    index = len(str(amount // 100))
     try:
-        file_save_db(num)
+        file_save_db(amount)
     except:
         print("error test 1")
     end_time = time()
-    print("test 1 completed, time: ", end_time - start_time)
+    full_time = end_time - start_time
+    print("test " + str(index) + " completed, time: ", full_time)
 
 
-def test2(): # 1000
-    start_time = time()
-    num = 1000
-    try:
-        file_save_db(num)
-    except:
-        print("error test 2")
-    end_time = time()
-    print("test 2 completed, time: ", end_time - start_time)
 
 
-def test3(): # 10000
-    start_time = time()
-    num = 10000
-    try:
-        file_save_db(num)
-    except:
-        print("error test 3")
-    end_time = time()
-    print("test 3 completed, time: ", end_time - start_time)
-
-
-def test4(amount): # тут надо будет считать с бд 100 рандомных массивов и отсортировать
+def test_sort(amount): # тут надо будет считать с бд 100 рандомных массивов и отсортировать
     start_time = time()
     index = len(str(amount // 100))
     try:
@@ -53,7 +34,7 @@ def test4(amount): # тут надо будет считать с бд 100 ра�
     print("test 4." + str(index) + " completed, time: ", full_time, "\naverage time for each array: ", avg_time)
 
 
-def test5(amount):
+def test_delete(amount):
     start_time = time()
     index = len(str(amount // 100))
     try:
