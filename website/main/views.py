@@ -3,10 +3,11 @@ from .models import SortedArray
 from django.shortcuts import render, get_object_or_404
 from .forms import SortedArrayForm
 from django.shortcuts import redirect
+# from sorting import cocktail_sort ИМПОРТ ФУНКЦИИ ШЛЕТ
 
 
 def index(request):
-    array = SortedArray.objects.all()
+    array = SortedArray.objects.all() # класс сортед аррей починить
     return render(request, 'main/index.html', {'array': array})
 
 
@@ -17,6 +18,7 @@ def sort_array(request):
             if 'action' in request.POST:
                 array_name = form.cleaned_data['array_name']
                 sorted_array = form.cleaned_data['sorted_array']
+                # sorted_array = ВОТ ЗДЕСЬ ФУНКЦИЯ СОРТИРОВКИ
 
                 # Логика сохранения данных
                 print(array_name)

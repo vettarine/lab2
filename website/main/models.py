@@ -2,6 +2,7 @@ from django.db import models
 
 
 class SortedArray(models.Model):
+    objects = None
     array_name = models.CharField(max_length=100)
     sorted_array = models.TextField()
 
