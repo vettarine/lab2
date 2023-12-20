@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4aa143f1-4645-4df5-b102-0e397627ee43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/website/main/templates/main/sorted.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,14 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tasya/Documents/GitHub/lab2/website/main/migrations&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/tasya/Documents/GitHub/lab2/website/main/templates/main",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tasya\Documents\GitHub\lab2\website\main\templates\main" />
       <recent name="C:\Users\tasya\Documents\GitHub\lab2\website\main\migrations" />
       <recent name="C:\Users\tasya\Documents\GitHub\lab2\website\main" />
       <recent name="C:\Users\tasya\Documents\GitHub\lab2" />

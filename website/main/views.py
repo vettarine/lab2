@@ -3,7 +3,9 @@ from .models import SortedArray
 from django.shortcuts import render, get_object_or_404
 from .forms import SortedArrayForm
 from django.shortcuts import redirect
-# from sorting import cocktail_sort ИМПОРТ ФУНКЦИИ ШЛЕТ
+# from sorting import cocktail_sort ИМПОРТ ФУНКЦИИ
+# from github.sorting import cocktail_sort ВОЗМОЖНО КАК-ТО СВЯЗАНО С VENV???
+
 
 def cocktail_sort(sort_array):
     """Sort with cocktail sort method and return the array"""
@@ -37,16 +39,19 @@ def sort_array(request):
             if 'action' in request.POST:
                 array_name = form.cleaned_data['array_name']
                 sorted_array = form.cleaned_data['sorted_array']
+                sorted_array = sorted_array.split()
                 array_tmp = []
                 for a in sorted_array:
                     tmp = int(a)
-                    array_tmp.append(str(tmp))
-                sorted_array = cocktail_sort(array_tmp)
+                    array_tmp.append(tmp)
+                sorted_array = str(cocktail_sort(array_tmp))
+
                 # Логика сохранения данных
                 print(array_name)
                 print(sorted_array)
 
         return JsonResponse({'sorted_array': sorted_array})  # класс сортед аррей починить
+        # return render(request, 'main/post_detail.html', {'post': sorted_array})
 
     return JsonResponse({'error': 'Invalid request'})
 
