@@ -1,9 +1,6 @@
 from time import time
-from array_generating import array_generating
-from random import randint
-from file_work import *
-from sorting import cocktail_sort
-from database_work import db_delete
+from website.main.file_work import *
+from website.main.database_work import db_delete
 
 
 def test_generate(amount): # генерим 100 массивчиков и закидываем в бд

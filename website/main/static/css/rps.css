@@ -1,6 +1,6 @@
 h1 a {
-    color: #7e26a9;
-    font-family: 'Lobster';
+    color: #2E242C;
+    font-family: 'Segoe print';
 }
 
 
@@ -8,20 +8,19 @@ body {
     padding-left: 0px;
 }
 
-col-md-8 {
-    color: #2b7ec7
+.output {
+    overflow: default;
 }
 
-
 .page-header {
-    background-color: #7e26a9;
+    background-color: #A45B90;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
     margin-bottom: 10;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #d5b9e3;
+    color: #2E242C;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -31,14 +30,14 @@ col-md-8 {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Segoe print', cursive;
 }
 
 
 .save {
     float: right;
-    background: #d5b9e3;
-    color: #7e26a9;
+    background: #A45B90;
+    color: #2E242C;
 }
 
 .post-form textarea, .post-form input {

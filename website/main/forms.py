@@ -7,4 +7,4 @@ class SortedArrayForm(forms.ModelForm):
 
     class Meta:
         model = SortedArray
-        fields = ('array_name', 'sorted_array')
+        fields = ('array_name', 'array', 'sorted_array')

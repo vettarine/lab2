@@ -1,7 +1,7 @@
-from database_work import db_input, db_output
-from array_generating import array_generating
+from .database_work import db_input, db_output
+from .array_generating import array_generating
 from random import randint
-from sorting import *
+from .sorting import *
 
 
 def file_save(array):

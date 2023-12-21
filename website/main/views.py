@@ -3,28 +3,10 @@ from .models import SortedArray
 from django.shortcuts import render, get_object_or_404
 from .forms import SortedArrayForm
 from django.shortcuts import redirect
-# from sorting import cocktail_sort ИМПОРТ ФУНКЦИИ
-# from github.sorting import cocktail_sort ВОЗМОЖНО КАК-ТО СВЯЗАНО С VENV???
-
-
-def cocktail_sort(sort_array):
-    """Sort with cocktail sort method and return the array"""
-    length = len(sort_array) # длина массива
-    for i in range(length - 1, 0, -1):
-        is_swapped = False  # цикл идет, пока элементы меняются местами (т.е. пока не стоят в нужном порядке)
-
-        for j in range(i, 0, -1):  # сортировка с конца массива (меньший элемент к началу массива)
-            if sort_array[j] < sort_array[j - 1]:
-                sort_array[j], sort_array[j - 1] = sort_array[j - 1], sort_array[j]
-                is_swapped = True  # элементы меняли местами или нет?
-
-        for j in range(i):  # сортировка с начала массива (больший элемент к концу массива)
-            if sort_array[j] > sort_array[j + 1]:
-                sort_array[j], sort_array[j + 1] = sort_array[j + 1], sort_array[j]
-                is_swapped = True  # элементы меняли местами или нет?
-
-        if not is_swapped:  # если элементы не переставляли (все элементы в нужном порядке)
-            return sort_array
+from .tests import *
+from .database_work import *
+from .sorting import cocktail_sort
+import sqlite3
 
 
 def index(request):
@@ -32,28 +14,26 @@ def index(request):
     return render(request, 'main/index.html', {'array': array})
 
 
-def sort_array(request):
-    if request.method == 'POST':
-        form = SortedArrayForm(request.POST)
-        if form.is_valid():
-            if 'action' in request.POST:
-                array_name = form.cleaned_data['array_name']
-                sorted_array = form.cleaned_data['sorted_array']
-                sorted_array = sorted_array.split()
-                array_tmp = []
-                for a in sorted_array:
-                    tmp = int(a)
-                    array_tmp.append(tmp)
-                sorted_array = str(cocktail_sort(array_tmp))
+def tests(request):
+    db_create('arrays.db')
 
-                # Логика сохранения данных
-                print(array_name)
-                print(sorted_array)
+    results = []
+    flag = True
+    amount = 10
+    while flag:
+        amount *= 10
+        results.append(test_generate(amount))
+        results.append(test_sort(amount))
+        results.append(test_delete(amount))
 
-        return JsonResponse({'sorted_array': sorted_array})  # класс сортед аррей починить
-        # return render(request, 'main/post_detail.html', {'post': sorted_array})
+        if amount == 10000:
+            flag = False
+    print(results)
+    data = {"header": "Tests results", "message1": results[0], "message2": results[1], "message3": results[2],
+            "message4": results[3], "message5": results[4], "message6": results[5], "message7": results[6],
+            "message8": results[7], "message9": results[8]}
 
-    return JsonResponse({'error': 'Invalid request'})
+    return render(request, 'main/tests.html', context=data)
 
 
 def post_detail(request, pk):
@@ -67,10 +47,42 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
+            item_id = post.pk
+
+            array = form.cleaned_data['sorted_array']
+            array = array.split()
+            array_tmp = []
+            for a in array:
+                tmp = int(a)
+                array_tmp.append(tmp)
+            sorted_array = cocktail_sort(array_tmp)
+
+            list = ""
+            for a in sorted_array:
+                list += str(a) + " "
+            list = list[:-1]
+
+            con = sqlite3.connect('db.sqlite3')
+            cursor = con.cursor()
+            cursor.execute("UPDATE main_sortedarray SET array = ? WHERE id = ?", (list, item_id))  # сиквел запрос
+            con.commit()
             return redirect('post_detail', pk=post.pk)
     else:
         form = SortedArrayForm()
+
     return render(request, 'main/post_edit.html', {'form': form})
+
+
+def post_delete(request):
+    if request.method == "POST":
+        form = SortedArrayForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = SortedArrayForm()
+    return render(request, 'massiv/post_edit.html', {'form': form})
 
 
 def post_edit(request, pk):

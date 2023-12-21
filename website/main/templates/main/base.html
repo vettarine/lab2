@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>RPS</title>
+        <title>Array Sorter</title>
         <link rel = "stylesheet" href = "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel = "stylesheet" href = "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href = "https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel = "stylesheet" type = "text/css">
@@ -14,12 +14,13 @@
         <div class="page-header">
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 
-            <h1><a href="/">Main</a></h1>
+            <h1><a href="/">Array Sorter 2000</a></h1>
         </div>
 
         <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
+            <div>
+
+                <div class="output">
                     {% block content %}
 
                     {% endblock %}

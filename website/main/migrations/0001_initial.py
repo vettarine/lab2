@@ -16,6 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('array_name', models.CharField(max_length=100)),
+                ('array', models.TextField()),
                 ('sorted_array', models.TextField()),
             ],
         ),

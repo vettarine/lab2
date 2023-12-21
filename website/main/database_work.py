@@ -1,5 +1,5 @@
 import sqlite3
-from array_generating import array_character_development
+from .array_generating import array_character_development
 
 
 def db_create(database):

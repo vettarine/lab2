@@ -1,12 +1,7 @@
 # cocktail sort
 
-from array_generating import array_generating
-from printing import print_array, print_salute
-from sorting import cocktail_sort
-from file_work import *
-from cheker import check_int
 from tests import *
-from database_work import *
+from website.main.database_work import *
 
 
 db_create('arrays.db')
