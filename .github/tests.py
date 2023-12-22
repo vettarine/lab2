@@ -5,9 +5,9 @@ from website.main.database_work import db_delete
 
 def test_generate(amount): # генерим 100 массивчиков и закидываем в бд
     start_time = time()
-    index = len(str(amount // 100))
+    index = len(str(amount // 100))   # ???
     try:
-        file_save_db(amount)
+        file_save_db(amount)  # сохраняем в бд
     except:
         print("error test 1")
     end_time = time()
@@ -17,7 +17,7 @@ def test_generate(amount): # генерим 100 массивчиков и зак
 
 
 
-def test_sort(amount): # тут надо будет считать с бд 100 рандомных массивов и отсортировать
+def test_sort(amount): # считывание с бд 100 рандомных массивов и отсортировать
     start_time = time()
     index = len(str(amount // 100))
     try:
@@ -31,7 +31,7 @@ def test_sort(amount): # тут надо будет считать с бд 100 �
     print("test 4." + str(index) + " completed, time: ", full_time, "\naverage time for each array: ", avg_time)
 
 
-def test_delete(amount):
+def test_delete(amount): #удаление 100 массивов из бд
     start_time = time()
     index = len(str(amount // 100))
     try:
