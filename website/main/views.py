@@ -56,7 +56,7 @@ def post_new(request): #создает сортирует сохр
             array = form.cleaned_data['sorted_array']  #сохраняем введенную инфу
 
             for i in array:
-                if i not in '0123456789 ':
+                if i not in '0123456789 -':
                     error(request)
                     return render(request, 'main/error.html')
             post.save() #сохр в бд
@@ -98,7 +98,7 @@ def post_edit(request, pk):
             array = form.cleaned_data['sorted_array']
 
             for i in array:
-                if i not in '0123456789 ':
+                if i not in '0123456789 -':
                     return render(request, 'main/error.html')
 
             post.save()

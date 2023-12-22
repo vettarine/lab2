@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4aa143f1-4645-4df5-b102-0e397627ee43" name="Changes" comment="" />
+    <list default="true" id="4aa143f1-4645-4df5-b102-0e397627ee43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/arrays.db" beforeDir="false" afterPath="$PROJECT_DIR$/website/arrays.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/main/templates/main/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/main/templates/main/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/main/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/website/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,15 +28,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/website/main/views.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.github/tests.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/website/main/tests.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.github/main.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/website/manage.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/website/main/templates/main/help.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,6 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tasya/Desktop/rps&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tasya\Documents\GitHub\lab2\.github" />
@@ -52,7 +58,7 @@
       <recent name="C:\Users\ааа\OneDrive\Документы\GitHub\lab2\.github" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.0001_initial">
+  <component name="RunManager" selected="Python.main">
     <configuration name="0001_initial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lab2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,6 +88,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\tasya\AppData\Local\JetBrains\PyCharmCE2022.3\demo\PyCharmLearningProject\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (PyCharmLearningProject)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.github" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -116,11 +123,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.0001_initial" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.manage" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.0001_initial" />

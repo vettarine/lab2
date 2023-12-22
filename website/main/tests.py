@@ -11,8 +11,9 @@ def test_generate(amount):  # генерим 100 массивчиков и за�
         output = "error in generating test for " + str(amount) + " arrays"
         return output
     end_time = time()
-    full_time = end_time - start_time
-    output = "generating test for " + str(amount) + " arrays completed, time: " + str(full_time)
+    full_time = round(((end_time - start_time) * 1000), 4)
+
+    output = "generating test for " + str(amount) + " arrays completed, time: " + str(full_time) + " ms"
     return output
 
 
@@ -25,10 +26,10 @@ def test_sort(amount):  # тут надо будет считать с бд 100 
         output = "error in sorting test for " + str(amount) + " arrays"
         return output
     end_time = time()
-    full_time = end_time - start_time
-    avg_time = full_time / 100
-    output = "sorting test for " + str(amount) + " arrays completed, time: " + str(full_time) + \
-             "\naverage time for each array: " + str(avg_time)
+    full_time = round(((end_time - start_time) * 1000), 4)
+    avg_time = round((full_time / 100), 4)
+    output = "sorting test for " + str(amount) + " arrays completed, time: " + str(full_time) + " ms" + \
+             "\naverage time for each array: " + str(avg_time) + " ms"
     return output
 
 
@@ -40,6 +41,6 @@ def test_delete(amount):
         output = "error in deleting test for " + str(amount) + " arrays"
         return output
     end_time = time()
-    full_time = end_time - start_time
-    output = "deleting test for " + str(amount) + " arrays completed, time: " + str(full_time)
+    full_time = round(((end_time - start_time) * 1000), 4)
+    output = "deleting test for " + str(amount) + " arrays completed, time: " + str(full_time) + " ms"
     return output
