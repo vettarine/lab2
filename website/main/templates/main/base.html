@@ -4,7 +4,6 @@
         <title>Array Sorter</title>
         <link rel = "stylesheet" href = "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel = "stylesheet" href = "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href = "https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel = "stylesheet" type = "text/css">
         <link rel = "stylesheet" href = "{% static 'css/rps.css' %}">
         <link rel="stylesheet" href="{% static 'ckeditor/ckeditor.css' %}">
         <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
@@ -13,6 +12,7 @@
     <body>
         <div class="page-header">
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'help' %}" class="top-menu"><span class="glyphicon glyphicon-question-sign"></span></a>
             <a class="btn btn-default" style="float: right; margin-right: 20px" href="{% url 'tests' %}">Tests</a>
 
             <h1><a href="/">Array Sorter 2000</a></h1>

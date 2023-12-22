@@ -43,13 +43,15 @@ def error(request):
     return render(request, 'main/error.html')
 
 
+def help(request):
+    return render(request, 'main/help.html')
+
+
 def post_new(request):
     if request.method == "POST":
         form = SortedArrayForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-
-            item_id = post.pk
 
             array = form.cleaned_data['sorted_array']
 
@@ -58,6 +60,7 @@ def post_new(request):
                     error(request)
                     return render(request, 'main/error.html')
             post.save()
+            item_id = post.pk
             array = array.split()
             array_tmp = []
             for a in array:
@@ -81,6 +84,8 @@ def post_new(request):
     return render(request, 'main/post_edit.html', {'form': form})
 
 
+
+
 def post_edit(request, pk):
     post = get_object_or_404(SortedArray, pk=pk)
     if request.method == "POST":
@@ -94,7 +99,6 @@ def post_edit(request, pk):
 
             for i in array:
                 if i not in '0123456789 ':
-                    error(request)
                     return render(request, 'main/error.html')
 
             post.save()
