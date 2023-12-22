@@ -1,15 +1,15 @@
 # cocktail sort
 
-from tests import *
+from tests import * #импортируем все функции
 from website.main.database_work import *
 
 
 db_create('arrays.db')
 db_delete()
 
-test_generate(100)
-test_sort(100)
-test_delete(100)
+test_generate(100) #генерация 100 массивов
+test_sort(100) #сортировка 100 массивов
+test_delete(100) #удаление 100 массивов
 
 
 

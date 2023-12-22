@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-from pathlib import Path
+from pathlib import Path #модуль для работы с путями файловых систем
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,17 +20,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-b^d6cioaw(k_8@1=i*mf=sbwq@ojies56&@2c4d4zb1k(wjig!'
+SECRET_KEY = 'django-insecure-b^d6cioaw(k_8@1=i*mf=sbwq@ojies56&@2c4d4zb1k(wjig!' #для подключения
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False #режим отладки
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com'] #лок хост и серверный
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [  #модули в приложении
     'main',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'website.urls'
+ROOT_URLCONF = 'website.urls' #ссылка
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3', #какую бд используем
     }
 }
 
@@ -118,7 +118,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' #пути к файлам статич файлам
 
 STATIC_ROOT = BASE_DIR / 'static'
 

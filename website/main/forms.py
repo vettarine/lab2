@@ -3,7 +3,7 @@ from django import forms
 from .models import SortedArray
 
 
-class SortedArrayForm(forms.ModelForm):
+class SortedArrayForm(forms.ModelForm): #задаем форму
 
     class Meta:
         model = SortedArray
