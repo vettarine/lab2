@@ -19,7 +19,6 @@
             <div id="text-justify">
                 <div class="array">
                     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.array_name }}</a></h1>
-                    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-remove"></span></a>
                     <p>Array: {{ post.sorted_array|linebreaksbr }}</p>
                     <p>Sorted array: {{ post.array|linebreaksbr }}</p>
                     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon"></span></a>

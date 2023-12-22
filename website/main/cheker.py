@@ -5,7 +5,7 @@ def check_int(n):
         if i not in '0123456789':
             is_digit = False
             print('Некорректный ввод')
-            
+            quit()
 
     if is_digit:
         if int(n) > 0:
