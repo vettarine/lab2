@@ -1,0 +1,18 @@
+Index: website/main/templates/main/help.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'main/base.html' %}\r\n\r\n{% block content %}\r\n    <div class=\"array\">\r\n        <h1>Welcome to Array Sorter 2000</h1>\r\n        <p>To add an array press + button in top right corner</p>\r\n        <p>To access editing mode for chosen array, click on its name in the list on the main page, then on opened page click pencil button</p>\r\n        <p>To save and sort an array, click save and sort button in editing mode</p>\r\n        <p>Please enter numbers separated by space in array field in editing mode</p>\r\n    </div>\r\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/website/main/templates/main/help.html b/website/main/templates/main/help.html
+--- a/website/main/templates/main/help.html	(revision d5ff02443d8a8b2d0042625a9060bb798500a5db)
++++ b/website/main/templates/main/help.html	(date 1703256682183)
+@@ -7,5 +7,6 @@
+         <p>To access editing mode for chosen array, click on its name in the list on the main page, then on opened page click pencil button</p>
+         <p>To save and sort an array, click save and sort button in editing mode</p>
+         <p>Please enter numbers separated by space in array field in editing mode</p>
++        <p>Tests button runs tests to check system </p>
+     </div>
+ {% endblock %}
+\ No newline at end of file
