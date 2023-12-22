@@ -5,10 +5,10 @@ from django.shortcuts import redirect
 from .tests import *
 from .database_work import *
 from .sorting import cocktail_sort
-import sqlite3
+import sqlite3 # модуль для взаимодействия с бд
 
 
-def index(request):
+def index(request): #фунция глав стр сайта  (для связи с html)
     array = SortedArray.objects.all()
     return render(request, 'main/index.html', {'array': array})
 
@@ -34,8 +34,8 @@ def tests(request):
     return render(request, 'main/tests.html', context=data)
 
 
-def post_detail(request, pk):
-    post = get_object_or_404(SortedArray, pk=pk)
+def post_detail(request, pk): #вывод массив, отсторт, имя
+    post = get_object_or_404(SortedArray, pk=pk) #переменная где записывается
     return render(request, 'main/post_detail.html', {'post': post})
 
 
@@ -47,21 +47,21 @@ def help(request):
     return render(request, 'main/help.html')
 
 
-def post_new(request):
+def post_new(request): #создает сортирует сохр
     if request.method == "POST":
-        form = SortedArrayForm(request.POST)
+        form = SortedArrayForm(request.POST) # форма для ввода массива:имя и массив(для вывода инфы н экран)
         if form.is_valid():
             post = form.save(commit=False)
 
-            array = form.cleaned_data['sorted_array']
+            array = form.cleaned_data['sorted_array']  #сохраняем введенную инфу
 
             for i in array:
                 if i not in '0123456789 ':
                     error(request)
                     return render(request, 'main/error.html')
-            post.save()
+            post.save() #сохр в бд
             item_id = post.pk
-            array = array.split()
+            array = array.split() #делим по пробелам
             array_tmp = []
             for a in array:
                 tmp = int(a)
@@ -74,9 +74,9 @@ def post_new(request):
             list = list[:-1]
 
             con = sqlite3.connect('db.sqlite3')
-            cursor = con.cursor()
+            cursor = con.cursor() #для манипуляц бд
             cursor.execute("UPDATE main_sortedarray SET array = ? WHERE id = ?", (list, item_id))  # сиквел запрос
-            con.commit()
+            con.commit() #выполнение
             return redirect('post_detail', pk=post.pk)
     else:
         form = SortedArrayForm()
